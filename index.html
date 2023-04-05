@@ -26,7 +26,7 @@
     </header>
     <main>
         <ul class="cartes">
-            <li v-for="troupe in tabTroupes">
+            <li v-for="troupe in tabTroupes" :key="troupe.id">
                 <article>
                     <header :style="'background: url(img/' + troupe.imageFond + ');'">
                         <!-- <img src="img/barbare.png" alt="Barbare"> -->
@@ -35,30 +35,33 @@
 
                     <div class="level"
                          :style="`color:${troupe.couleur};`">
-                        Niveau 4
+                        Niveau {{ troupe.niveau }}
                     </div>
 
                     <h1 class="name">{{ troupe.nom }}</h1>
 
-                    <p class="description">Ce guerrier intrépide compte sur ses
-                        muscles saillants et sa fière moustache pour semer le
-                        chaos dans les villages ennemis. Faites charger une
-                        horde de barbares et profitez du spectacle !</p>
+                    <p class="description">{{ troupe.description }}</p>
 
                     <footer>
                         <div class="training"
-                             style="background-color: #EC9B3B;">
-                            <div>20<sup>sec</sup></div>
+                             :style="`background-color: ${ troupe.couleur };`">
+                            <div v-if="troupe.formation <= 60">
+                                {{ troupe.formation }}<sup>sec</sup>
+                            </div>
+                            <div v-else>
+                                {{ Math.round(troupe.formation / 60) }}
+                                <sup>min</sup>
+                            </div>
                             <div>Formation</div>
                         </div>
                         <div class="speed"
-                             style="background-color: #EC9B3B;">
+                             :style="`background-color: ${ troupe.couleur };`">
                             <div>{{ troupe.vitesse }}</div>
                             <div>Vitesse</div>
                         </div>
                         <div class="cost"
-                             style="background-color: #EC9B3B;">
-                            <div>150</div>
+                             :style="`background-color: ${ troupe.couleur };`">
+                            <div>{{ troupe.cout }}</div>
                             <div>Coût</div>
                         </div>
                     </footer>

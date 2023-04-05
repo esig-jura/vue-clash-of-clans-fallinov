@@ -82,8 +82,8 @@ ul.cartes {
     margin: 2rem auto 80px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
-
 }
 
 /*** Une carte ***/
@@ -109,10 +109,10 @@ article header {
 }
 
 header img {
-    width: 400px;
-    position: absolute;
-    top: -65px;
-    left: -70px;
+    max-width: calc(100% + 160px);
+    max-height: 350px;
+    margin-top: -80px;
+    margin-left: -80px;
 }
 
 /*** Contenu ***/
