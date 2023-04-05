@@ -67,7 +67,19 @@ const app = createApp({
             formation: 720,
             vitesse: 16,
             cout: 12000
-          }
+          },
+        {
+          id: 5,
+          nom: 'Rugbyman',
+          description: 'Le rugby, c\'est l\'histoire d\'un ballon avec des copains autour et quand il n\'y a plus de ballon, il reste les copains. C\'est quand même l\'essentiel.',
+          image: 'rugbyman.png',
+          imageFond: 'giant-bg.jpg',
+          couleur: '#3a5f46',
+          niveau: 1,
+          formation: 93,
+          vitesse: 5,
+          cout: 350
+        }
         ]
     }
   }
