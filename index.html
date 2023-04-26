@@ -47,6 +47,7 @@
                     <!-- <button :style="`background-color: ${troupe.couleur}`"> -->
                     <button :style="{ backgroundColor: troupe.couleur }"
                             @click="formerTroupe(troupe.cout)"
+                            :disabled="totalOr < troupe.cout"
                     >
                         Former <img src="img/piece-or.png" alt="Former">
                     </button>
