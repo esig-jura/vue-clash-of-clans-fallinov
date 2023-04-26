@@ -6,81 +6,69 @@ const app = createApp({
       titre: 'Clash of Clans',
       description: 'Construire un village, former un clan et participer à' +
         ' des guerres de clans épiques !',
-      lien: 'https://supercell.com/en/games/clashofclans/',
-      tabTroupes: [
-          {
-            id: 1,
-            nom: 'Barbare',
-            description: 'Ce guerrier intrépide compte sur ses muscles saillants et sa fière moustache pour semer le chaos dans les villages ennemis. Faites charger une horde de barbares et profitez du spectacle !',
-            image: 'barbare.png',
-            imageFond: 'barbare-bg.jpg',
-            couleur: '#EC9B3B',
-            niveau: 4,
-            formation: 20,
-            vitesse: 16,
-            cout: 150
-          },
-          {
-            id: 2,
-            nom: 'Archer',
-            description: 'Ces tireurs d\'élite préfèrent garder leurs distances, aussi bien sur le champs de bataille que dans la vie. Ils n\'aiment rien tant que de voir tomber la cible sur laquelle ils ont jeté leur dévolu.',
-            image: 'archer.png',
-            imageFond: 'archer-bg.jpg',
-            couleur: '#EE5487',
-            niveau: 5,
-            formation: 25,
-            vitesse: 24,
-            cout: 300
-          },
-          {
-            id: 5,
-            nom: 'Rugbyman',
-            description: 'Le rugby, c\'est l\'histoire d\'un ballon avec des copains autour et quand il n\'y a plus de ballon, il reste les copains. C\'est quand même l\'essentiel.',
-            image: 'rugbyman.png',
-            imageFond: 'giant-bg.jpg',
-            couleur: '#3a5f46',
-            niveau: 1,
-            formation: 93,
-            vitesse: 5,
-            cout: 350
-          },
-          {
-            id: 3,
-            nom: 'Géant',
-            description: 'Ces grands gaillards semblent calmes de prime abord, mais ils se déchaîneront à la simple vue d\'une tourelle ou d\'un canon ! Lents mais résistants, ces guerriers sont faits pour encaisser les coups.',
-            image: 'giant.png',
-            imageFond: 'giant-bg.jpg',
-            couleur: '#F6901A',
-            niveau: 5,
-            formation: 120,
-            vitesse: 12,
-            cout: 2250
-          },
-          {
-            id: 4,
-            nom: 'Gobelin',
-            description: 'Ces petites créatures agaçantes ne pensent qu\'à une chose: le BUTIN ! Ils sont plus rapides qu\'un piège à ressort, et leur appétit pour les ressources est sans limite.',
-            image: 'goblin.png',
-            imageFond: 'goblin-bg.jpg',
-            couleur: '#82BB30',
-            niveau: 5,
-            formation: 30,
-            vitesse: 32,
-            cout: 100
-          },
-          {
-            id: 5,
-            nom: 'Dragon',
-            description: 'Les dragons sont connus à travers tout le territoire pour leur puissance sans égal. Cette terreur écailleuse du ciel ne montre aucune pitié ; et rien n\'échappe à son souffle mortel.',
-            image: 'dragon.png',
-            imageFond: 'dragon-bg.jpg',
-            couleur: '#5F3A59',
-            niveau: 2,
-            formation: 720,
-            vitesse: 16,
-            cout: 12000
-          }
-        ]
+      site: 'https://supercell.com/en/games/clashofclans/',
+      troupes: [
+        {
+          id: 1,
+          nom: 'Barbare',
+          description: 'Ce guerrier intrépide compte sur ses muscles saillants et sa fière moustache pour semer le chaos dans les villages ennemis. Faites charger une horde de barbares et profitez du spectacle !',
+          image: 'barbare.png',
+          imageFond: 'barbare-bg.jpg',
+          couleur: '#EC9B3B',
+          niveau: 4,
+          formation: 20,
+          vitesse: 16,
+          cout: 150
+        },
+        {
+          id: 2,
+          nom: 'Archer',
+          description: 'Ces tireurs d\'élite préfèrent garder leurs distances, aussi bien sur le champs de bataille que dans la vie. Ils n\'aiment rien tant que de voir tomber la cible sur laquelle ils ont jeté leur dévolu.',
+          image: 'archer.png',
+          imageFond: 'archer-bg.jpg',
+          couleur: '#EE5487',
+          niveau: 5,
+          formation: 25,
+          vitesse: 24,
+          cout: 300
+        },
+        {
+          id: 3,
+          nom: 'Géant',
+          description: 'Ces grands gaillards semblent calmes de prime abord, mais ils se déchaîneront à la simple vue d\'une tourelle ou d\'un canon ! Lents mais résistants, ces guerriers sont faits pour encaisser les coups.',
+          image: 'giant.png',
+          imageFond: 'giant-bg.jpg',
+          couleur: '#F6901A',
+          niveau: 5,
+          formation: 120,
+          vitesse: 12,
+          cout: 2250
+        },
+        {
+          id: 4,
+          nom: 'Gobelin',
+          description: 'Ces petites créatures agaçantes ne pensent qu\'à une chose: le BUTIN ! Ils sont plus rapides qu\'un piège à ressort, et leur appétit pour les ressources est sans limite.',
+          image: 'goblin.png',
+          imageFond: 'goblin-bg.jpg',
+          couleur: '#82BB30',
+          niveau: 5,
+          formation: 30,
+          vitesse: 32,
+          cout: 100
+        },
+        {
+          id: 5,
+          nom: 'Dragon',
+          description: 'Les dragons sont connus à travers tout le territoire pour leur puissance sans égal. Cette terreur écailleuse du ciel ne montre aucune pitié ; et rien n\'échappe à son souffle mortel.',
+          image: 'dragon.png',
+          imageFond: 'dragon-bg.jpg',
+          couleur: '#5F3A59',
+          niveau: 2,
+          formation: 720,
+          vitesse: 16,
+          cout: 12000
+        }
+      ]
     }
   }
 }).mount('#app')
