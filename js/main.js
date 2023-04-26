@@ -1,12 +1,5 @@
-const name = 'Steve';
-console.log('Salut ' + name);
-console.log(`Salut ${name}`);
-
-
-
 const { createApp } = Vue
-
-const app = createApp({
+createApp({
   data() {
     return {
       totalOr: 20000,
@@ -76,6 +69,16 @@ const app = createApp({
           cout: 12000
         }
       ]
+    }
+  },
+  methods: {
+    formerTroupe(cout) {
+      if(this.totalOr < cout) {
+        alert('Vous n\'avez pas assez d\'or !');
+        return; // On sort de la fonction
+      }
+      // this.totalOr = this.totalOr - cout
+      this.totalOr -= cout
     }
   }
 }).mount('#app')
