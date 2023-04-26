@@ -18,7 +18,7 @@
 <div id="app">
     <div class="solde-or">
         <img src="img/piece-or-note.jpg" alt="Solde Or">
-        20 000 pièces d'or
+        {{ totalOr.toLocaleString('fr-CH') }} pièces d'or
     </div>
     <header>
         <h1>{{ titre }}</h1>
@@ -43,7 +43,11 @@
 
                     <h2 class="name">{{ troupe.nom }}</h2>
 
-                    <button>
+                    <!-- <button :style="'background-color: ' + troupe.couleur"> -->
+                    <!-- <button :style="`background-color: ${troupe.couleur}`"> -->
+                    <button :style="{ backgroundColor: troupe.couleur }"
+                            @click="totalOr = totalOr - troupe.cout"
+                    >
                         Former <img src="img/piece-or.png" alt="Former">
                     </button>
 

@@ -1,8 +1,15 @@
+const name = 'Steve';
+console.log('Salut ' + name);
+console.log(`Salut ${name}`);
+
+
+
 const { createApp } = Vue
 
 const app = createApp({
   data() {
     return {
+      totalOr: 20000,
       titre: 'Clash of Clans',
       description: 'Construire un village, former un clan et participer à' +
         ' des guerres de clans épiques !',
